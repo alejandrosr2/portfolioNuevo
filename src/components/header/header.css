@@ -47,7 +47,7 @@ header {
     letter-spacing: 1px; 
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1026px) {
     .subtitle {
             font-size: 3vw;
     }
