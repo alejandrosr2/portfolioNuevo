@@ -1,0 +1,48 @@
+
+.description-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem 2rem;
+    min-height: 100vh;
+    gap: 5rem;
+}
+
+.about-me{
+    border-right: 4px solid #98ffd4;
+    padding-right: 1rem;
+    text-align: right;
+}
+
+.articles {
+    font-size: larger;
+}
+
+
+@media (max-width: 600px) {
+  .description-container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about-me {
+    text-align: left;
+    border-right: none;
+    border-bottom: 4px solid #98ffd4;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+
+  .articles {
+    font-size: larger;
+    width: 100%;
+  }
+}

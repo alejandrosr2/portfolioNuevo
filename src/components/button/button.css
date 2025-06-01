@@ -1,0 +1,106 @@
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-button {
+    background-color: #98ffd4;
+    color: black;
+    border: 2px solid black;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: color 0.4s ease, border-color 0.4s ease;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@media (max-width: 1025px) {
+    .custom-button {
+        width: 100%;       
+        max-width: 100%;   
+        height: 45px;      
+        padding: 0 10px;   
+    }
+    
+    .button-wrapper {
+        width: 100%;       
+    }
+}
+
+.custom-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: left 0.5s ease;
+}
+
+.custom-button:hover::before {
+    left: 0;
+}
+
+.custom-button:hover {
+    color: black;
+    border-color: white;
+}
+
+.button-reflection {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 100px;
+    background: radial-gradient(ellipse at center, rgba(152, 255, 250, 0.3) 0%, transparent 90%);
+    filter: blur(20px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+@media (max-width: 1025px) {
+    .button-reflection {
+        width: 100%;
+        height: 50px;
+        top: 100%;
+        left: 40%;
+        transform: translateX(-50%);
+        background: radial-gradient(ellipse at center, rgba(152, 255, 250, 0.15) 0%, transparent 90%);
+        filter: blur(10px);
+        opacity: 0.3;
+    }
+}
+
+.button-wrapper:hover .button-reflection {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 0%, transparent 80%);
+}
+
+.button-icon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+
+@media (max-width: 600px) {
+    .button-icon {
+        font-size: 1rem;
+        margin-right: 6px;
+    }
+}

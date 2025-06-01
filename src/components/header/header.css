@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap");
+
+header {
+    height: 100vh;
+
+}
+
+.title {
+    font-family: "Geostar Fill", sans-serif;
+    font-size: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    margin: 0 auto; 
+    color: #98ffd4;
+    text-align: right;
+}
+
+@media (max-width: 1025px) {
+    .title {
+            font-size: 10.5vw;
+    }
+}
+
+.line {
+    display: block;
+    width: 100%;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.subtitle-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.subtitle {
+    font-size: 1.5vw;
+
+    display: inline-block;
+    opacity: 0;
+    letter-spacing: 1px; 
+}
+
+@media (max-width: 1025px) {
+    .subtitle {
+            font-size: 3vw;
+    }
+}
+
+
+.scroll-div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+@media (max-width: 1025px) {
+    .scroll-div {
+        display: none;
+    }
+}
+
+.scroll {
+    font-size: 2vw;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 1025px) {
+    .btn-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+}
+
+.container {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1025px) {
+    .container {
+        margin-top: 550px; 
+        align-items: flex-end;
+        flex-direction: column;
+
+    }
+}
+
+.open {
+    border-bottom: 4px solid #98ffd4;
+    border-left: 4px solid #98ffd4;
+    padding-left: .5rem;
+}
+
+.work {
+    border-left: 4px solid #98ffd4;
+    padding-left: .5rem;
+}
+
+.nav-links {
+    position: absolute;
+    bottom: 450px; 
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+    opacity: 0.7;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-left: 3px solid #98ffd4;
+    padding-left: 8px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #98ffd4;
+}
+
+@media (max-width: 1025px) {
+    .nav-links {
+        bottom: 450px; 
+        left: 10px;
+    }
+}
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1f1f1f;
+    color: #98ffd4;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 0.95rem;
+    z-index: 1000;
+    animation: toastFade 2.5s ease-in-out forwards;
+}
+
+@keyframes toastFade {
+    0% { opacity: 0; transform: translateY(20px); }
+    10%, 80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(20px); }
+}

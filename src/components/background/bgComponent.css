@@ -1,0 +1,72 @@
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #2f434f -25%, #000000 40%);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.starfield {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.twinkle {
+    animation-name: twinkle;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.move-vertical {
+    animation-name: move-vertical;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move-vertical {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+}
+
+.move-horizontal {
+    animation-name: move-horizontal;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move-horizontal {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(40px); }
+    100% { transform: translateX(0); }
+}
+
+.move-diagonal {
+    animation-name: move-diagonal;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move-diagonal {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -30px); }
+    100% { transform: translate(0, 0); }
+}
